@@ -1,0 +1,12 @@
+{
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\" : "application",
+      "Core\\" : "eyphp",
+      "App\\home\\" : "application/components",
+      "App\\admin\\" : "application/admin/components"
+    }
+  }
+}
