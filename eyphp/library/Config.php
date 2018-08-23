@@ -1,5 +1,6 @@
 <?php
 /**
+ * 配置文件读取类
  * Config.php
  * Created by PhpStorm.
  * User: chenli

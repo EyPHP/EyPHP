@@ -8,11 +8,12 @@
 
 namespace App\home\index;
 
-use Core\library\Request;
 use App\home\index\model;
+use Core\library\Controller;
+use Core\library\Request;
 
 
-class IndexController
+class IndexController extends Controller
 {
     public function index(){
         $model = new model\IndexModel();
@@ -22,8 +23,9 @@ class IndexController
     }
 
     public function lst(){
-        $img = Request::getString('img','s');
-        var_dump($img);die;
-        echo 'chenli';
+        $img = Request::getString('img',1);
+        $this->assign('img',$img);
+        $this->display('index.html');
+
     }
 }

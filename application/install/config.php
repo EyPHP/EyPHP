@@ -17,5 +17,10 @@ return array(
 
     'database' => array(
         'host' => 3306
+    ),
+    'appName' => 'demo',
+
+    'smarty' => array(
+        'cache' => false, // 关闭后端缓存
     )
 );

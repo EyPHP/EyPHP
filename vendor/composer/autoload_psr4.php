@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Smarty\\' => array($vendorDir . '/smarty/smarty/libs'),
     'Core\\' => array($baseDir . '/eyphp'),
     'App\\home\\' => array($baseDir . '/application/components'),
     'App\\admin\\' => array($baseDir . '/application/admin/components'),

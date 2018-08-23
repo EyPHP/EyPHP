@@ -12,27 +12,26 @@ use Core\library;
 
 class Run
 {
-
     // 路由
     public $url = array();
-
     // 路由配置
     public $router = array();
 
     public $module = null;
     public $controller = null;
     public $action = null;
-
     public $com = null;
 
-    public function __construct($config = array())
+    public $config = null;
+
+    public function __construct()
     {
         // 获取路由配置
-        $config = library\Factory::getConfig();
-        $this->router = $config->getConfig('','Router');
+        $this->config = library\Factory::getConfig();
+        $this->router = $this->config->getConfig('','Router');
         //实例化路由类
         library\Router::init($this->router);
-
+        // 获取当前路由参数
         $this->url = library\Router::makeUrl();
 
         $this->module = $this->url['module']?:'home';
@@ -53,6 +52,9 @@ class Run
         
     }
 
+    /**
+     * 程序入口
+     */
     public function start()
     {
         //实例化改类

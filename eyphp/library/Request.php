@@ -1,5 +1,6 @@
 <?php
 /**
+ * 请求类
  * Request.php
  * Created by PhpStorm.
  * User: chenli
