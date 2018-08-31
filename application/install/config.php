@@ -9,7 +9,7 @@
 return array(
     // 路由设置
     'Router' => array(
-        'URL_MODE' => 0,
+        'URL_MODE' => 1,
         'VAR_CONTROLLER' => 'com',
         'VAR_ACTION' => 't',
         'VAR_MODULE' => 'module'

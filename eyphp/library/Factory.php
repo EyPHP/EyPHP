@@ -41,13 +41,29 @@ class Factory
      * 创建SMARTY模版
      *
      */
-    public static function &getTemplate()
+    static public function &getTemplate()
     {
         static $instance;
 
         if (!isset($instance))
         {
             $instance = new \Smarty();
+        }
+
+        return $instance;
+    }
+
+    /**
+     * 创建Curl
+     *
+     */
+    static public function &getCurl()
+    {
+        static $instance;
+
+        if (!isset($instance))
+        {
+            $instance = new Curl();
         }
 
         return $instance;
